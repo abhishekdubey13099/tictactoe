@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&family=Ubuntu&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+nav{
+  background-color: #C689C6;
+  color: white;
+  height: 50px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+  list-style-type:none;
+}
+
+.gameContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  color: black;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: repeat(3,10vw);
+  grid-template-columns: repeat(3,10vw);
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+
+.box{
+  border: 2px solid #7F669D;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info{
+  font-size: 20px;
+}
+
+.box:hover{
+  background-color: #D2DAFF;
+}
+
+.gameInfo{
+  padding: 0 30px;
+}
+
+.imgBox img{
+  width: 0;
+  transition: width is ease-in-out;
+}
+
+
+.br-0{
+  border-right: 0;
+}
+
+.bl-0{
+  border-left: 0;
+}
+
+.bt-0{
+  border-top: 0;
+}
+
+.bb-0{
+  border-bottom: 0;
+}
+
+#reset{
+  margin: 0 25px;
+  padding: 6px 15px;
+  background-color: #FFCEFE;
+  border-radius: 10px;
+  cursor: pointer;
+  border-width: thin;
+  font-weight: bolder;
+}
+
+.line{
+  background-color: black;
+  width: 0;
+  height: 3px;
+  position: absolute;
+  background-color: #FF6464;
+  transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 1000px){
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameInfo{
+    margin-top: 35px;
+  }
+  .gameInfo h1{
+    font-size: 1.5rem;
+  }
+
+  .container{
+    display: grid;
+    grid-template-rows: repeat(3,20vw);
+    grid-template-columns: repeat(3,20vw);
+  }
+}
